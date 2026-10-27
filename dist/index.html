@@ -2,315 +2,77 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f2e9">
-  <meta name="description" content="Дизайн-концепция сайта «В гостях у пиренейских мастифов»: встреча с редкой породой, история хозяйки и волжская природа.">
-  <title>В гостях у пиренейских мастифов — концепция сайта</title>
-  <style>
-    :root{--cream:#f6f3eb;--paper:#edeadd;--pine:#183d35;--pine2:#24483f;--sage:#677f6d;--sage-light:#e0e6db;--ink:#213a32;--muted:#64736c;--gold:#cba879;--line:#d9d9ca;--white:#fffdfa;--shadow:0 24px 75px rgba(26,51,38,.13);font-synthesis:none}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:100px}
-    body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.56 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    button,a{font:inherit}
-    a{color:inherit;text-decoration:none}
-    button{cursor:pointer}
-    img{display:block;max-width:100%}
-    h1,h2,h3,p{margin-top:0}
-    h1,h2,h3,.serif{font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-weight:400}
-    :focus-visible{outline:3px solid #b98f58;outline-offset:4px}
-    ::selection{background:#c7d0be;color:#183d35}
-    .container{width:min(100% - 72px,1280px);margin-inline:auto}
-    .micro{font-size:11px;line-height:1.4;letter-spacing:.19em;text-transform:uppercase;font-weight:700}
-    .topnote{background:var(--pine);color:#e8eee6;font-size:11px;letter-spacing:.08em;text-align:center;padding:9px 16px}
-    .topnote span{color:#c9bd9a}
-    .site-header{position:sticky;top:0;z-index:30;background:rgba(246,243,235,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(29,58,46,.10)}
-    .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{display:flex;align-items:center;gap:13px;min-width:0;flex-shrink:0}
-    .brand-icon{width:43px;height:43px;border:1px solid var(--sage);border-radius:50%;display:grid;place-items:center;color:var(--pine)}
-    .brand-name{font-family:Georgia,serif;font-size:19px;line-height:1.03;letter-spacing:-.025em}
-    .brand-name small{display:block;font:700 10px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.16em;color:var(--sage);text-transform:uppercase}
-    .desktop-nav{display:flex;align-items:center;gap:33px;margin-left:auto}
-    .desktop-nav a{font-size:13px;font-weight:550;white-space:nowrap;transition:color .2s}
-    .desktop-nav a:hover{color:#a47c49}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:14px 23px;min-height:48px;border:1px solid transparent;border-radius:2px;font-size:13px;font-weight:650;letter-spacing:.025em;line-height:1.2;transition:background .2s,transform .2s,border-color .2s;white-space:nowrap}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-green{background:var(--pine);color:#fffdf4}
-    .btn-green:hover{background:#2e594d}
-    .btn-outline{background:transparent;border-color:rgba(29,57,46,.45);color:var(--pine)}
-    .btn-outline:hover{background:#e4e8dc}
-    .btn-light{background:#f5f1e7;color:var(--pine)}
-    .btn-light:hover{background:#fffdf5}
-    .btn-white-outline{color:#fffef7;border-color:rgba(255,255,245,.55)}
-    .arrow{font-size:19px;font-weight:400;line-height:1}
-    .menu-toggle{display:none;align-items:center;justify-content:center;background:transparent;border:1px solid #9ea99b;width:44px;height:44px;color:var(--pine);font-size:23px}
-    .mobile-nav{display:none;background:var(--cream);padding:0 24px 24px;border-bottom:1px solid var(--line)}
-    .mobile-nav.open{display:flex;flex-direction:column;gap:0}
-    .mobile-nav a{padding:13px 4px;border-bottom:1px solid var(--line);font-size:15px}
-    .hero{position:relative;min-height:min(790px,87svh);display:flex;align-items:center;overflow:hidden;color:#fffef7;background:var(--pine)}
-    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.83) contrast(.99)}
-    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,38,30,.91) 0%,rgba(17,49,39,.79) 28%,rgba(15,48,40,.46) 48%,rgba(15,48,40,.08) 77%);z-index:1}
-    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,43,33,.45),transparent 38%);z-index:1}
-    .hero-content{z-index:2;position:relative;padding:85px 0 110px}
-    .hero-content>div{max-width:680px}
-    .hero-eyebrow{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.2em;font-weight:650;text-transform:uppercase;color:#f0e6ce;margin-bottom:38px}
-    .hero-eyebrow:before{content:"";height:1px;background:#d4c5a3;width:41px;display:block}
-    h1{font-size:clamp(58px,6.6vw,105px);line-height:.97;letter-spacing:-.055em;margin:0 0 34px;text-wrap:balance}
-    h1 em{font-weight:400;font-style:italic;color:#d9c6a1}
-    .hero-lead{font-size:clamp(16px,1.55vw,19px);line-height:1.7;max-width:490px;color:#f0f1e5;margin:0 0 39px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:13px}
-    .hero-foot{position:absolute;z-index:2;bottom:28px;width:100%;font-size:12px;letter-spacing:.045em;color:#f2ede0;opacity:.84}
-    .hero-foot .container{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .hero-decor{font:italic 18px Georgia,serif;opacity:.95}
-    .intro-strip{background:var(--pine);color:#f6f2e7;padding:26px 0}
-    .strip-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-    .strip-item{display:flex;align-items:center;justify-content:center;gap:20px;font-size:13px;letter-spacing:.06em}
-    .strip-item:not(:last-child){border-right:1px solid rgba(255,255,255,.22)}
-    .strip-icon{font-family:Georgia,serif;font-size:26px;font-style:italic;color:var(--gold)}
-    .section{padding:118px 0}
-    .kicker{color:#7b8066;display:flex;align-items:center;gap:15px;margin:0 0 23px}
-    .kicker:before{content:"";width:35px;height:1px;background:#ac9f7e;display:block}
-    h2{font-size:clamp(42px,4.1vw,70px);line-height:1.09;letter-spacing:-.045em;margin-bottom:28px;text-wrap:balance}
-    h2 em{font-style:italic;color:#667b66}
-    .text-muted{color:var(--muted)}
-    .intro-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:8%;align-items:center}
-    .intro-copy p:not(.kicker){max-width:540px;font-size:17px;line-height:1.8}
-    .photo-stack{position:relative;aspect-ratio:1.13;background:#d6d8c5;box-shadow:var(--shadow)}
-    .photo-stack img{width:100%;height:100%;object-fit:cover}
-    .photo-sticker{position:absolute;left:-38px;bottom:-25px;background:#fbf9f1;padding:22px 27px;max-width:235px;box-shadow:0 12px 40px rgba(19,50,37,.13)}
-    .photo-sticker strong{font-family:Georgia,serif;font-size:25px;line-height:1.18;display:block;font-weight:400}
-    .photo-sticker span{display:block;margin-top:10px;font-size:11px;line-height:1.45;color:var(--muted)}
-    .divider-doodle{color:#9aa997;font-size:30px;letter-spacing:.35em;margin-top:30px}
-    .formats{background:#eaece2}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:44px}
-    .section-head h2{max-width:760px;margin-bottom:0}
-    .section-head>p{max-width:320px;font-size:14px;line-height:1.7;margin:0 0 8px;color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .visit-card{background:#f8f6ef;padding:37px 32px 34px;min-height:470px;display:flex;flex-direction:column;align-items:stretch;border:1px solid #e1e3d5;transition:transform .25s,box-shadow .25s,border-color .25s}
-    .visit-card:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(35,56,43,.08);border-color:#bdc9b9}
-    .visit-card.featured{background:var(--pine);color:#fbf6e9;border-color:var(--pine)}
-    .visit-card .card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:55px}
-    .num{font:italic 38px Georgia,serif;letter-spacing:-.06em;color:#82917f}
-    .featured .num{color:#c7bb99}
-    .card-tag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#6d7b6c;border:1px solid #cbd2c6;padding:7px 8px;line-height:1.2}
-    .featured .card-tag{border-color:rgba(255,255,255,.4);color:#e9e4d5}
-    .visit-card h3{font-size:clamp(31px,2.6vw,41px);line-height:1.1;letter-spacing:-.045em;margin-bottom:16px}
-    .visit-card p{color:#617269;font-size:14px;line-height:1.8;margin-bottom:24px}
-    .featured p{color:#d7dfd6}
-    .card-details{display:flex;flex-direction:column;gap:12px;border-top:1px solid #d7ded3;padding-top:23px;margin-top:auto}
-    .featured .card-details{border-color:rgba(255,255,255,.25)}
-    .detail{display:flex;align-items:flex-start;gap:11px;font-size:13px;line-height:1.5}
-    .detail:before{content:"✳";color:#8ca18d;font-size:14px;line-height:1.3}
-    .featured .detail:before{color:#e0c49b}
-    .card-link{display:flex;align-items:center;justify-content:space-between;padding-top:24px;margin-top:24px;border-top:1px solid #d7ded3;font-size:13px;font-weight:650}
-    .featured .card-link{border-color:rgba(255,255,255,.25)}
-    .card-link span:last-child{font-size:22px}
-    .note{font-size:12px;color:#718073;margin-top:22px}
-    .guide{background:var(--pine);color:#f6f1e5;position:relative;overflow:hidden}
-    .guide:before{content:"";position:absolute;right:-260px;top:-140px;width:730px;height:730px;border:1px solid rgba(224,225,194,.10);border-radius:50%;box-shadow:0 0 0 80px rgba(224,225,194,.028),0 0 0 160px rgba(224,225,194,.02)}
-    .guide-grid{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:9%;align-items:center}
-    .portrait-placeholder{min-height:540px;position:relative;background:linear-gradient(145deg,#627866,#293e36);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(255,255,255,.18)}
-    .portrait-placeholder:before,.portrait-placeholder:after{content:"";position:absolute;border:1px solid rgba(230,235,216,.14);border-radius:50%;width:410px;height:410px}
-    .portrait-placeholder:after{width:570px;height:570px}
-    .portrait-symbol{z-index:1;font:italic 113px Georgia,serif;color:#d7d9bb;line-height:1;opacity:.7}
-    .portrait-caption{z-index:1;position:absolute;bottom:33px;left:33px;right:33px;background:rgba(246,244,231,.94);color:#294839;padding:18px 19px;font-size:12px;line-height:1.6}
-    .portrait-caption strong{display:block;font-size:14px;margin-bottom:2px}
-    .guide-copy h2 em{color:#d6c6a3}
-    .guide-copy p:not(.kicker){font-size:17px;line-height:1.85;max-width:570px;color:#d8e2d6}
-    .guide-quote{padding:30px 0 0;border-top:1px solid rgba(255,255,255,.18);margin-top:43px;font:italic 26px/1.4 Georgia,serif;color:#dfd8ba;max-width:540px}
-    .guide-note{font-size:12px;color:#cbd8ca;margin-top:13px}
-    .place-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:9%;align-items:center}
-    .place-copy>p:not(.kicker){font-size:16px;line-height:1.85;max-width:530px}
-    .place-art{min-height:560px;background:var(--sage-light);padding:52px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
-    .place-art:before,.place-art:after{content:"";position:absolute;border:1px solid rgba(60,98,78,.23);border-radius:55% 45% 64% 36%;width:650px;height:380px;transform:rotate(-19deg);left:-240px;top:130px}
-    .place-art:after{width:530px;height:290px;left:-100px;top:185px;transform:rotate(-28deg)}
-    .place-art .art-top{position:relative;z-index:1;font:italic 25px Georgia,serif;color:#53765e}
-    .place-art .art-main{position:relative;z-index:1;font:normal 74px/1.03 Georgia,serif;letter-spacing:-.07em;color:var(--pine);max-width:380px}
-    .place-art .art-bottom{position:relative;z-index:1;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#66816a}
-    .place-features{display:grid;grid-template-columns:1fr 1fr;gap:23px;margin-top:35px}
-    .place-features>div{padding-top:16px;border-top:1px solid var(--line)}
-    .place-features strong{display:block;font-size:14px;margin-bottom:6px}
-    .place-features span{display:block;color:var(--muted);font-size:13px;line-height:1.6}
-    .journey{background:#edeadd;padding:88px 0}
-    .journey h2{max-width:730px}
-    .journey-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:49px}
-    .journey-step{padding:0 27px 0 20px;border-left:1px solid #abb6a4}
-    .journey-step .dot{display:block;font:italic 30px Georgia,serif;color:#9aab9b;margin-bottom:27px}
-    .journey-step strong{display:block;font-size:16px;margin-bottom:11px}
-    .journey-step p{font-size:13px;line-height:1.75;color:var(--muted);margin:0}
-    .cta{background:#f7f5ee;padding:115px 0 96px;text-align:center}
-    .cta-inner{max-width:830px;margin:auto}
-    .cta .kicker{justify-content:center}
-    .cta h2{font-size:clamp(45px,5vw,77px);margin-bottom:21px}
-    .cta p{max-width:620px;margin:0 auto 35px;color:var(--muted);font-size:17px;line-height:1.8}
-    .selected-format{display:inline-block;padding:10px 18px;background:#e5ebdf;border:1px solid #d4ded2;margin:0 0 22px;font-size:13px;color:#314f3b}
-    .cta-optional{font-size:12px!important;margin-top:20px!important;color:#79837b!important}
-    .footer{background:#153a31;color:#e1e9dd;padding:45px 0 33px}
-    .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:start;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.18)}
-    .footer-brand{font:30px/.99 Georgia,serif;letter-spacing:-.03em}
-    .footer-brand span{display:block;color:#c6b48e;font:italic 18px Georgia,serif;margin-top:8px}
-    .footer-links{display:flex;gap:27px;font-size:13px}
-    .footer-links a:hover{text-decoration:underline}
-    .footer-bottom{display:flex;justify-content:space-between;gap:15px;margin-top:28px;font-size:11px;color:#bacac0}
-    .notice-pop{position:fixed;bottom:22px;left:50%;z-index:50;transform:translateX(-50%) translateY(150%);transition:transform .25s;background:var(--pine);color:#fffef6;max-width:min(540px,calc(100% - 30px));padding:18px 22px;box-shadow:var(--shadow);font-size:13px;text-align:center}
-    .notice-pop.show{transform:translateX(-50%) translateY(0)}
-    @media(max-width:1080px){.desktop-nav{gap:18px}.desktop-nav a{font-size:12px}.header-inner{gap:16px}.container{width:min(100% - 48px,1280px)}.visit-card{padding:30px 24px}.visit-card .card-top{margin-bottom:38px}.section{padding:88px 0}.guide-grid{gap:6%}.portrait-placeholder{min-height:490px}}
-    @media(max-width:850px){.desktop-nav,.header-action{display:none}.menu-toggle{display:flex}.header-inner{min-height:72px}.hero{min-height:700px}.hero-image{object-position:60% 50%}.hero:before{background:linear-gradient(90deg,rgba(13,43,34,.9),rgba(13,43,34,.62) 58%,rgba(13,43,34,.18))}.hero-content{padding:95px 0}.intro-layout,.guide-grid,.place-layout{grid-template-columns:1fr;gap:55px}.photo-stack{max-width:650px;width:calc(100% - 30px);margin-left:30px}.guide-copy{order:-1}.portrait-placeholder{min-height:420px;max-width:650px}.section-head{display:block}.section-head>p{margin-top:22px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.visit-card:last-child{grid-column:span 2;min-height:340px}.visit-card:last-child .card-top{margin-bottom:28px}.place-art{min-height:450px}.journey-grid{grid-template-columns:repeat(2,1fr);row-gap:45px}.intro-strip{padding:22px 0}.strip-item{font-size:11px;gap:10px}.footer-top{flex-direction:column;gap:28px}}
-    @media(max-width:600px){.container{width:min(100% - 36px,1280px)}.topnote{font-size:10px;line-height:1.5;padding:8px 24px}.brand-icon{width:38px;height:38px}.brand-name{font-size:16px}.brand-name small{font-size:8px}.hero{min-height:740px;align-items:flex-end}.hero-image{object-position:66% 20%}.hero:before{background:linear-gradient(0deg,rgba(9,39,31,.98) 0%,rgba(9,39,31,.92) 22%,rgba(12,41,32,.45) 55%,rgba(12,41,32,.09) 100%)}.hero-content{padding:160px 0 92px}.hero-eyebrow{font-size:9px;gap:9px;margin-bottom:25px}.hero-eyebrow:before{width:23px}h1{font-size:clamp(53px,13vw,73px);line-height:1.01;margin-bottom:20px}.hero-lead{font-size:15px;line-height:1.7;max-width:400px;margin-bottom:27px}.hero-actions{gap:8px}.hero-actions .btn{padding:14px 17px;font-size:12px}.hero-foot{bottom:17px}.hero-foot .container{font-size:9px}.hero-decor{display:none}.intro-strip{padding:18px 0}.strip-grid{grid-template-columns:1fr;gap:10px}.strip-item{justify-content:flex-start;border:0!important;font-size:11px;gap:14px}.strip-icon{font-size:20px;min-width:24px}.section{padding:76px 0}.kicker{font-size:10px;margin-bottom:20px}.kicker:before{width:24px}h2{font-size:clamp(39px,10vw,53px)}.intro-copy p:not(.kicker){font-size:15px;line-height:1.8}.photo-stack{aspect-ratio:.96}.photo-sticker{left:-16px;bottom:-22px;padding:17px 19px}.photo-sticker strong{font-size:21px}.section-head{margin-bottom:30px}.cards{grid-template-columns:1fr}.visit-card{min-height:0;padding:28px 25px 25px}.visit-card:last-child{grid-column:auto;min-height:0}.visit-card .card-top{margin-bottom:30px}.visit-card h3{font-size:35px}.visit-card p{margin-bottom:24px}.guide-copy p:not(.kicker){font-size:15px}.guide-quote{font-size:24px;margin-top:28px}.portrait-placeholder{min-height:380px}.place-art{min-height:400px;padding:31px}.place-art .art-main{font-size:60px}.place-features{gap:14px}.journey{padding:69px 0}.journey-grid{gap:26px 0;margin-top:37px}.journey-step{padding:0 15px}.journey-step .dot{margin-bottom:17px}.journey-step strong{font-size:14px}.journey-step p{font-size:12px}.cta{padding:79px 0 70px}.cta p{font-size:15px}.footer{padding:40px 0 25px}.footer-brand{font-size:26px}.footer-links{gap:15px;flex-wrap:wrap}.footer-bottom{flex-direction:column;font-size:10px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#2F4A3C">
+  <meta name="description" content="В гостях у пиренейских мастифов Fromaragon в селе Безводное: знакомство с породой, программы с Екатериной Борисовой, птицеводство и время у Волги.">
+  <title>В гостях у пиренейских мастифов · Fromaragon · Безводное</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232F4A3C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='43' font-family='Georgia' fill='%23F6F1E7'%3EF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <div class="topnote">Визуальная концепция сайта <span>·</span> Иллюстративные изображения <span>·</span> Не действующая форма бронирования</div>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="На главную: В гостях у пиренейских мастифов">
-        <span class="brand-icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M2 17.5 9.4 7l4.1 5.6 2.6-3.5L24 19"/><path d="M2 21c4-1.4 7.5-1.4 11 0 4-.8 7.2-.9 11 .2"/><circle cx="19.5" cy="5" r="2"/></svg>
-        </span>
-        <span class="brand-name"><small>На берегу Волги</small>В гостях у<br>пиренейских мастифов</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Основная навигация">
-        <a href="#about">О питомнике</a><a href="#formats">Форматы</a><a href="#host">Хозяйка</a><a href="#place">Наше место</a>
-      </nav>
-      <a class="btn btn-outline header-action" href="#contact">Как попасть в гости <span class="arrow" aria-hidden="true">↗</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">☰</button>
+      <a class="brand" href="#home" aria-label="Fromaragon — на главную"><span class="brand-mark" aria-hidden="true">f.</span><span>Fromaragon<small>Пиренейские мастифы · Волга</small></span></a>
+      <nav class="desktop-nav" aria-label="Основная навигация"><a href="#visits">Визиты</a><a href="#host">Екатерина</a><a href="#place">Безводное</a></nav>
+      <a class="header-cta" href="#invitation">Приехать в гости <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><span></span><span></span></button>
     </div>
-    <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация">
-      <a href="#about">О питомнике</a><a href="#formats">Форматы</a><a href="#host">Хозяйка</a><a href="#place">Наше место</a><a href="#contact">Как попасть в гости</a>
-    </nav>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden><a href="#visits">Выбрать визит</a><a href="#host">Познакомиться с Екатериной</a><a href="#place">Село Безводное</a><a href="#invitation">Приехать в гости</a></nav>
   </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/ekaterina-mastiff-meadow.jpg" width="1920" height="1280" alt="Екатерина с пиренейским мастифом на тропинке среди луговых трав" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow hero-eyebrow">Питомник Fromaragon приглашает</p>
+        <h1 id="hero-title">В гостях<br>у пиренейских<br><em>мастифов</em></h1>
+        <p class="hero-description">Знакомиться с благородными великанами.<br class="desktop-break"> Узнавать жизнь питомника. Замедляться у Волги.</p>
+        <a class="button button-terracotta" href="#visits">Выбрать свой визит <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-bottom container"><span class="location"><span aria-hidden="true">⌖</span> Село Безводное · на Волге</span><span class="hero-note">Встречает Екатерина Борисова</span></div>
+      <span class="hero-number" aria-hidden="true">01 / Место встречи</span>
+    </section>
+    <div class="welcome-strip"><div class="container"><span>Редкая порода</span><i aria-hidden="true">✳</i><span>Личная встреча с заводчиком</span><i aria-hidden="true">✳</i><span>Малые группы</span><i aria-hidden="true">✳</i><span>Настоящая жизнь у Волги</span></div></div>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/hero-mastiff.webp" alt="Иллюстративная фотография большой белой собаки с тёмной маской на лугу над широкой рекой" fetchpriority="high">
-      <div class="container hero-content"><div>
-        <p class="hero-eyebrow">Действующий питомник · природа · встречи</p>
-        <h1 id="hero-title">В гости к<br><em>пиренейским</em><br>мастифам</h1>
-        <p class="hero-lead">Познакомьтесь с удивительной породой вживую. Истории собак, разговор с человеком, который их знает, и особенная атмосфера волжской природы.</p>
-        <div class="hero-actions">
-          <a class="btn btn-light" href="#formats">Выбрать формат встречи <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="btn btn-white-outline" href="#about">О питомнике</a>
-        </div>
-      </div></div>
-      <div class="hero-foot"><div class="container"><span>Место, где знакомство становится историей</span><span class="hero-decor">С любовью к породе и природе</span></div></div>
+    <section class="intro section container" aria-labelledby="intro-title">
+      <p class="eyebrow">Собаки. Люди. Свой ритм.</p>
+      <div class="intro-grid"><h2 id="intro-title">У большой собаки —<br><em>целый мир.</em><br>Приглашаем в него.</h2><div class="intro-copy"><p class="lead">Здесь знакомятся с пиренейскими мастифами и человеком, который посвятил им свою жизнь.</p><p>Приезжайте семьёй, вдвоём или небольшой компанией: узнать характер редкой породы, поговорить с Екатериной, увидеть питомник и познакомиться с органическим птицеводством.</p><p>А если вы выбираете собаку или хотите разобраться в породе глубже — посвятим встречу вашим вопросам.</p><a class="text-link" href="#host">Кто вас встречает <span aria-hidden="true">↗</span></a></div></div>
     </section>
 
-    <div class="intro-strip"><div class="container strip-grid" aria-label="Три стороны нашего проекта">
-      <div class="strip-item"><span class="strip-icon" aria-hidden="true">01</span><span>Встреча с собаками</span></div>
-      <div class="strip-item"><span class="strip-icon" aria-hidden="true">02</span><span>Знания от хозяйки</span></div>
-      <div class="strip-item"><span class="strip-icon" aria-hidden="true">03</span><span>Природа и история места</span></div>
-    </div></div>
+    <section class="flagship section" id="visits" aria-labelledby="flagship-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Начните с этого визита</p><span class="section-index">02 / В гости</span></div>
+        <div class="flagship-grid">
+          <figure class="flagship-image"><img src="assets/mastiff-volga.jpg" width="1920" height="1280" alt="Екатерина и пиренейский мастиф на лугу, вдали видна Волга" loading="lazy"><figcaption>Знакомство начинается с личной встречи</figcaption></figure>
+          <div class="flagship-copy"><span class="pill">Наш главный визит · 3–4 часа</span><h2 id="flagship-title">Порода<br><em>и органика</em></h2><p class="lead">Полдня в мире Fromaragon: мастифы, редкие птицы, разговор о породе и натуральном хозяйстве.</p><ul class="visit-includes"><li>Знакомство с пиренейскими мастифами и жизнью питомника</li><li>Разговор с Екатериной о характере, содержании и выборе собаки</li><li>Знакомство с органическим птицеводством и угощение</li></ul><div class="price-row"><div class="price">от 15 000 ₽<small>за человека</small></div><a class="button button-pine" href="#invitation" data-visit="breed-organic">Обсудить визит <span aria-hidden="true">↗</span></a></div><p class="fineprint">Для семей, любителей собак и тех, кто хочет узнать больше о жизни на природе.</p></div>
+        </div>
+        <div class="other-heading"><h3>Можно на пару часов.<br><em>А можно — с ночёвкой.</em></h3><p>Выберите, сколько времени хотите провести вместе.</p></div>
+        <div class="visit-grid">
+          <article class="visit-card"><div class="card-heading"><span class="eyebrow">Первое знакомство</span><span class="card-number">01</span></div><h3>Пиренейский мастиф:<br>от мечты к реальности</h3><p>Увидеть редкую породу вблизи, услышать историю питомника и задать первые вопросы заводчику.</p><div class="card-meta"><span>1,5–2 часа</span><span>Семьёй или небольшой компанией</span></div><div class="card-bottom"><div class="price">4 000 ₽<small>за человека</small></div><a class="round-link" href="#invitation" data-visit="first-meeting" aria-label="Выбрать визит Пиренейский мастиф: от мечты к реальности">↗</a></div></article>
+          <article class="visit-card visit-card-evening"><div class="card-heading"><span class="eyebrow">Личный формат · с ночёвкой</span><span class="card-number">03</span></div><h3>Жизнь с мастифом:<br>день с заводчиком</h3><p>Для будущих владельцев и тех, кто хочет понять породу через повседневную жизнь питомника и личное общение.</p><div class="card-meta"><span>Прогулка с Екатериной и собаками</span><span>Вечер у Волги · ужин · баня · ночёвка</span></div><div class="card-bottom"><div class="price">от 28 000 ₽<small>за человека</small></div><a class="round-link" href="#invitation" data-visit="breeder-day" aria-label="Выбрать визит Жизнь с мастифом: день с заводчиком">↗</a></div></article>
+        </div>
+        <p class="visit-footnote">Визиты — по предварительной договорённости. Для программ «от» итоговая стоимость за человека зависит от согласованного состава визита. Программу и условия участия детей обсудим до поездки.</p>
+      </div>
+    </section>
 
-    <section class="section" id="about"><div class="container intro-layout">
-      <div class="intro-copy">
-        <p class="micro kicker">01 / Знакомство</p>
-        <h2>Больше, чем<br>просто <em>экскурсия</em></h2>
-        <p>Пиренейские мастифы — сильные и благородные собаки с удивительной историей. У каждой — свой характер, свои привычки и своё место в жизни питомника.</p>
-        <p class="text-muted">В этой истории важны не только сами собаки. Важно, кто рядом с ними, как устроена их жизнь и почему однажды целая семья выбрала путь, связанный с природой.</p>
-        <div class="divider-doodle" aria-hidden="true">∿ ∿ ∿</div>
-      </div>
-      <div class="photo-stack">
-        <img src="assets/two-mastiffs.webp" alt="Иллюстративная фотография двух пиренейских мастифов на лугу" loading="lazy">
-        <div class="photo-sticker"><strong>Не смотреть издалека. Узнать поближе.</strong><span>Встречи с собаками проводятся по правилам питомника.</span></div>
-      </div>
-    </div></section>
+    <section class="host section container" id="host" aria-labelledby="host-title">
+      <div class="host-grid"><div class="host-copy"><p class="eyebrow">Человек, который вас встречает</p><h2 id="host-title">Екатерина<br><em>Борисова</em></h2><p class="host-role">Кинолог · заводчик · хозяйка Fromaragon</p><p class="lead">«Я искала собаку. А нашла породу, которая изменила мою жизнь».</p><p>Так начинается личная история, из которой выросли питомник, знания о пиренейских мастифах и желание делиться ими с другими.</p><p>Екатерина развивает породу, создаёт просветительские и обучающие программы, рассказывает о жизни на природе и ведении натурального хозяйства.</p><p class="host-education">Выпускница Школы фермера и Академии агротуризма. Создатель семейного проекта «Лесная ферма 41Га».</p><a class="text-link" href="https://www.fromaragon.ru/" target="_blank" rel="noopener noreferrer">История породы и питомника на Fromaragon <span aria-hidden="true">↗</span></a></div><figure class="host-photo"><img src="assets/ekaterina-and-mastiff.jpg" width="1920" height="1280" alt="Екатерина сидит рядом с мастифом, который протягивает ей лапу" loading="lazy"><figcaption><span>Fromaragon</span><span>История продолжается в личных встречах</span></figcaption></figure></div>
+    </section>
 
-    <section class="section formats" id="formats"><div class="container">
-      <p class="micro kicker">02 / Форматы встреч</p>
-      <div class="section-head"><h2>У каждого гостя —<br><em>свой интерес</em></h2><p>Кому-то важно впервые увидеть этих собак. Кому-то — понять породу глубже. А кто-то мечтает почувствовать ритм загородной жизни.</p></div>
-      <div class="cards">
-        <article class="visit-card">
-          <div class="card-top"><span class="num">01.</span><span class="card-tag">Знакомство</span></div>
-          <h3>Первое<br>знакомство</h3>
-          <p>Для семей, путешественников и всех, кто хочет увидеть пиренейских мастифов вживую и услышать их историю.</p>
-          <div class="card-details"><div class="detail">Ориентир: 1,5–2 часа</div><div class="detail">Небольшая группа</div><div class="detail">Впечатления, рассказы, фотографии</div></div>
-          <a class="card-link" href="#contact" data-format="Первое знакомство"><span>Мне интересно</span><span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="visit-card featured">
-          <div class="card-top"><span class="num">02.</span><span class="card-tag">Глубже о породе</span></div>
-          <h3>Погружение<br>в породу</h3>
-          <p>Разговор для будущих владельцев, заводчиков и тех, кто хочет понять характер, особенности и потребности этих собак.</p>
-          <div class="card-details"><div class="detail">Несколько часов / полдня</div><div class="detail">Акцент на экспертном общении</div><div class="detail">Содержание, воспитание, выбор собаки</div></div>
-          <a class="card-link" href="#contact" data-format="Погружение в породу"><span>Мне интересно</span><span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="visit-card">
-          <div class="card-top"><span class="num">03.</span><span class="card-tag">Идея развития</span></div>
-          <h3>Жизнь<br>питомника</h3>
-          <p>Возможность однажды остаться подольше: загородный вечер, неспешное знакомство с укладом и природой.</p>
-          <div class="card-details"><div class="detail">Ночёвка и баня — на этапе проверки готовности</div><div class="detail">Для пар и небольших групп</div><div class="detail">Формат будет уточнён хозяйкой</div></div>
-          <a class="card-link" href="#contact" data-format="Жизнь питомника"><span>Мне интересно</span><span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-      <p class="note">* Названия, длительность и содержание программ — предварительная концепция. Расписание, цены и доступность уточняются.</p>
-    </div></section>
+    <section class="evening" aria-labelledby="evening-title"><img src="assets/evening-by-volga.jpg" width="1920" height="1280" alt="Ребёнок и мастиф сидят на берегу Волги в свете заката" loading="lazy"><div class="evening-overlay"></div><div class="container evening-content"><p class="eyebrow">Время, которое остаётся с вами</p><h2 id="evening-title">Есть вечера,<br>которые хочется<br><em>продлить.</em></h2><p>Ужин, баня, ночь у Волги.<br>А утром — питомник и прогулка<br>с Екатериной и собаками.</p><a class="text-link light-link" href="#invitation" data-visit="breeder-day">Остаться подольше <span aria-hidden="true">↗</span></a></div></section>
 
-    <section class="section guide" id="host"><div class="container guide-grid">
-      <div class="portrait-placeholder" role="img" aria-label="Место для настоящего портрета хозяйки питомника">
-        <span class="portrait-symbol" aria-hidden="true">✳</span>
-        <div class="portrait-caption"><strong>Здесь будет настоящий портрет хозяйки</strong>Живое фото, имя и личная история — ключевой элемент будущего сайта.</div>
-      </div>
-      <div class="guide-copy">
-        <p class="micro kicker" style="color:#ccbd9e">03 / Человек и дело</p>
-        <h2>У каждой<br>большой истории<br>есть <em>свой человек</em></h2>
-        <p>Хозяйка питомника — не просто организатор встреч. Она хранит знания о породе, занимается разведением, рассказывает о жизни собак и помогает будущим владельцам познакомиться с ними осознанно.</p>
-        <p>Именно её голос, опыт и личная история должны стать сердцем этого сайта.</p>
-        <div class="guide-quote">«Сюда приезжают увидеть собак, а уезжают с историей, которую хочется рассказывать».</div>
-        <p class="guide-note">Пример эмоциональной формулировки, не реальная цитата хозяйки.</p>
-      </div>
-    </div></section>
+    <section class="place section container" id="place" aria-labelledby="place-title"><div class="section-heading"><p class="eyebrow">Место встречи</p><span class="section-index">03 / Безводное</span></div><div class="place-grid"><div class="place-title"><h2 id="place-title">Село Безводное.<br><em>Большая вода.<br>Своя история.</em></h2><p>Волга, луговые тропинки и вечера у воды — часть жизни питомника и вашей поездки.</p><p>Планируйте время без спешки: на знакомство, разговор и возможность просто побыть здесь.</p><div class="place-location"><span aria-hidden="true">⌖</span><div><strong>Село Безводное</strong><p>Точное место встречи и подсказки по дороге Екатерина сообщит при согласовании визита.</p></div></div></div><figure class="place-photo"><img src="assets/bezvodnoe-church.jpg" width="700" height="500" alt="Голубой деревянный храм с золотыми куполами на фотографии села Безводное" loading="lazy"><figcaption>Детали места, в которое приезжаешь</figcaption></figure></div></section>
 
-    <section class="section" id="place"><div class="container place-layout">
-      <div class="place-copy">
-        <p class="micro kicker">04 / Место силы</p>
-        <h2>Там, где<br><em>дышится иначе</em></h2>
-        <p>Волжская природа — не фон, а часть впечатления. Здесь можно замедлиться, прислушаться к звукам загородной жизни и открыть для себя незнакомую сторону привычных мест.</p>
-        <p class="text-muted">История семьи, птицеводство, дорога мимо старого храма — всё это может дополнить рассказ о питомнике. Факты, маршрут и доступность объектов уточним отдельно.</p>
-        <div class="place-features"><div><strong>Берег Волги</strong><span>Природная атмосфера и пространство</span></div><div><strong>Местная история</strong><span>Достопримечательности по пути</span></div></div>
-      </div>
-      <div class="place-art" aria-label="Иллюстративная карточка будущего семейного проекта">
-        <div class="art-top">Продолжение истории</div>
-        <div class="art-main">Лесная<br>ферма<br><em>41Га</em></div>
-        <div class="art-bottom">Семейный проект · концепция развития</div>
-      </div>
-    </div></section>
+    <section class="private-visits"><div class="container private-grid"><figure><img src="assets/walk-with-mastiff.jpg" width="1920" height="1280" alt="Девочка и пиренейский мастиф с маленькой корзинкой на луговой тропинке" loading="lazy"></figure><div class="private-copy"><p class="eyebrow">По вашему поводу</p><h2>Своя встреча.<br><em>Свои воспоминания.</em></h2><p>Фотосессия с мастифами, «Званый ужин» или частный визит — расскажите, что задумали. Екатерина поможет обсудить формат.</p><a class="text-link" href="#invitation" data-visit="private">Обсудить свою идею <span aria-hidden="true">↗</span></a></div></div></section>
 
-    <section class="journey" aria-labelledby="journey-title"><div class="container">
-      <p class="micro kicker">05 / Как это может быть</p>
-      <h2 id="journey-title">День, который<br>хочется запомнить</h2>
-      <div class="journey-grid">
-        <div class="journey-step"><span class="dot">01</span><strong>Дорога к питомнику</strong><p>Природа и красивые места по пути к Волге.</p></div>
-        <div class="journey-step"><span class="dot">02</span><strong>Знакомство с хозяйкой</strong><p>Почему появились мастифы и как устроен питомник.</p></div>
-        <div class="journey-step"><span class="dot">03</span><strong>Встреча с собаками</strong><p>Наблюдение и общение по правилам безопасности.</p></div>
-        <div class="journey-step"><span class="dot">04</span><strong>Истории и фотографии</strong><p>Впечатления, которые останутся после поездки.</p></div>
-      </div>
-      <p class="note">Это иллюстративный сценарий, а не утверждённая программа экскурсии.</p>
-    </div></section>
+    <section class="future section container"><p class="eyebrow">Следующая глава</p><div><h2>Лесная ферма <em>41Га</em></h2><p>Семейный агротуристический проект Екатерины — продолжение истории Fromaragon. Сегодня знакомимся в Безводном, а впереди — новая территория и новые встречи.</p></div><span class="future-note">Проект в развитии</span></section>
 
-    <section class="cta" id="contact"><div class="container cta-inner">
-      <p class="micro kicker">Будем знакомы?</p>
-      <h2>Каждая добрая история<br>начинается <em>со встречи</em></h2>
-      <p>Здесь появятся актуальные контакты хозяйки, условия посещения и возможность согласовать удобный день. Пока можно посмотреть пример того, как будет выглядеть приглашение в гости.</p>
-      <div class="selected-format" id="chosen-format" hidden>Интересует: <strong id="chosen-name"></strong></div>
-      <div><button type="button" class="btn btn-green" id="demo-contact">Как записаться в гости <span class="arrow" aria-hidden="true">↗</span></button></div>
-      <p class="cta-optional">Демонстрация: обращения не отправляются, контакты и стоимость не вымышлены.</p>
+    <section class="invitation section" id="invitation" aria-labelledby="invitation-title"><div class="container invitation-grid"><div class="invitation-copy"><p class="eyebrow">От приглашения — к встрече</p><h2 id="invitation-title">Приезжайте<br><em>в гости.</em></h2><p class="lead">Расскажите, когда хотите приехать и с кем. Выберем визит, обсудим детали и согласуем дату.</p><dl class="contact-list"><div><dt>Telegram Екатерины</dt><dd>Контакт будет добавлен</dd></div><div><dt>Телефон</dt><dd>Номер будет добавлен</dd></div><div><dt>Где встречаемся</dt><dd>Село Безводное, на Волге</dd></div></dl><p class="preview-note">Контакты пока оставлены заглушками. В этом варианте можно подготовить текст обращения; отправка не подключена.</p></div>
+      <form class="visit-form" id="visit-form"><h3>Какой визит вам ближе?</h3><label for="visit-type">Формат встречи</label><select id="visit-type" name="visit"><option value="breed-organic">Порода и органика · от 15 000 ₽ / чел.</option><option value="first-meeting">Первое знакомство · 4 000 ₽ / чел.</option><option value="breeder-day">День с заводчиком и ночёвкой · от 28 000 ₽ / чел.</option><option value="private">Фотосессия, ужин или частный визит</option><option value="help">Помогите выбрать</option></select><div class="form-row"><div><label for="guest-name">Как вас зовут</label><input id="guest-name" name="name" autocomplete="given-name" maxlength="80" placeholder="Ваше имя"></div><div><label for="visit-date">Желаемая дата</label><input id="visit-date" name="date" type="date"></div></div><label for="guest-company">С кем планируете приехать</label><input id="guest-company" name="company" maxlength="180" placeholder="Например, двое взрослых и ребёнок"><label for="guest-comment">Что вам особенно интересно</label><textarea id="guest-comment" name="comment" rows="3" maxlength="1500" placeholder="Расскажите о своих пожеланиях"></textarea><button class="button button-terracotta" type="submit">Подготовить обращение <span aria-hidden="true">↗</span></button><p class="form-note">Данные остаются на этой странице. Форма ничего не отправляет и не бронирует дату.</p><div class="message-result" id="message-result" hidden><label for="prepared-message">Ваш текст для Екатерины</label><textarea id="prepared-message" rows="8" readonly></textarea><button class="text-link copy-button" id="copy-message" type="button">Скопировать текст <span aria-hidden="true">↗</span></button><p id="form-status" role="status" aria-live="polite"></p></div><noscript><p>Для подготовки текста включите JavaScript. Контакты хозяйки пока не добавлены.</p></noscript></form>
     </div></section>
   </main>
-
-  <footer class="footer"><div class="container">
-    <div class="footer-top"><div class="footer-brand">В гостях у<br>пиренейских мастифов<span>Семья. Собаки. Волга.</span></div><nav class="footer-links" aria-label="Навигация внизу"><a href="#about">История</a><a href="#formats">Встречи</a><a href="#host">Хозяйка</a><a href="#place">Место</a></nav></div>
-    <div class="footer-bottom"><span>© Дизайн-концепция · Не официальный сайт питомника</span><span>Иллюстративные AI-изображения · Фото и сведения будут заменены на реальные</span></div>
-  </div></footer>
-  <div class="notice-pop" id="notice" role="status" aria-live="polite">Это дизайн-превью. Настоящие контакты и запись подключим после согласования с хозяйкой.</div>
-  <script>
-    (function(){
-      const toggle=document.querySelector('.menu-toggle');
-      const nav=document.getElementById('mobile-menu');
-      toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.textContent=open?'×':'☰';});
-      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
-      document.querySelectorAll('[data-format]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('chosen-format').hidden=false;document.getElementById('chosen-name').textContent=link.dataset.format;}));
-      const popup=document.getElementById('notice');let timer;
-      document.getElementById('demo-contact').addEventListener('click',()=>{popup.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>popup.classList.remove('show'),4600);});
-    }());
-  </script>
+  <footer class="footer"><div class="container"><div class="footer-top"><a class="footer-brand" href="#home">В гостях у<br><em>пиренейских мастифов</em></a><p>От знаний о породе —<br>к личной встрече с ней.</p><a class="text-link light-link" href="https://www.fromaragon.ru/" target="_blank" rel="noopener noreferrer">Fromaragon <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>Село Безводное · Волга</span><span>Локальный дизайн-вариант · реальные фотографии</span><a href="#home">К началу ↑</a></div></div></footer>
 </body>
 </html>
