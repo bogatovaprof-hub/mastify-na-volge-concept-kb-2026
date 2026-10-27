@@ -21,3 +21,6 @@
 @media(max-width:360px){.invitation h2{font-size:53px}.private-copy h2{font-size:35px}.flagship h2{font-size:58px}}
 
 .intro>.eyebrow,.host-copy>.eyebrow,.private-copy>.eyebrow,.future>.eyebrow{color:var(--pine)}
+
+.brand{font-size:21px;line-height:1.1;letter-spacing:-.035em}.brand-mark{font:27px/1 var(--serif);padding:0;flex-shrink:0}.brand small{margin-top:7px}
+@media(max-width:650px){.header-inner{gap:14px}.brand{font-size:19px;line-height:1.1;gap:0}.brand-mark{display:none}.brand small{font-size:7px;letter-spacing:.13em}.menu-toggle{flex-shrink:0}}
